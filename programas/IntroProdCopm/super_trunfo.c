@@ -9,6 +9,8 @@ int main(){
    float ar1, ar2;
    float pib1, pib2;
    int turi1, turi2;
+   float dp1, dp2;
+   float pibcapita1, pibcapita2;
 
    //primeira carta
    printf("Insira as informações da primeira carta \n");
@@ -25,15 +27,21 @@ int main(){
    printf("Insira a população de seu estado:");
    scanf("%d", &pop1);
 
-   printf("Insira a área total de seu estado(use . ao invés de , para separar):");
+   printf("Insira a área total de seu estado:");
    scanf("%f", &ar1);
 
-   printf("Insira o PIB de seu estado(use . ao invés de , para separar):");
+   printf("Insira o PIB de seu estado(escreva o algarismo completo do número):");
    scanf("%f", &pib1);
 
    printf("Insira o número de pontos turísticos de seu estado:");
    scanf("%d", &turi1);
 
+
+   printf("\n");
+
+   dp1 = pop1/ar1;
+
+   pibcapita1 = pib1/pop1;
 
    printf("Carta 1:\n ");
    printf("Estado: %c \n", estado1);
@@ -41,8 +49,10 @@ int main(){
    printf("Nome da cidade: %s\n", cid1);
    printf("População: %d \n", pop1);
    printf("Área: %.2f Km²\n", ar1);
-   printf("PIB: %.2f\n",pib1);
+   printf("PIB: %.2f bilhões de reais \n",pib1);
    printf("Número de pontos turísticos: %d\n", turi1);
+   printf("Densidade populacional: %.2f hab/km² \n", dp1);
+   printf("Pib per Capita: %.2f reais\n", pibcapita1);
 
 
    //segunda carta
@@ -58,18 +68,23 @@ int main(){
    printf("Insira o nome completo de sua cidade(use _ ao invés de espaço para separar nomes compostos):");
    scanf("%s", cid2);
 
-   printf("Insira a população de seu estado:");
+   printf("Insira a população de seu estado(escreva o algarismo completo do número):");
    scanf("%d", &pop2);
 
-   printf("Insira a área total de seu estado(use . ao invés de , para separar):");
+   printf("Insira a área total de seu estado:");
    scanf("%f", &ar2);
 
-   printf("Insira o PIB de seu estado(use . ao invés de , para separar):");
+   printf("Insira o PIB de seu estado(escreva o algarismo completo do número):");
    scanf("%f", &pib2);
 
    printf("Insira o número de pontos turísticos de seu estado:");
    scanf("%d", &turi2);
 
+   printf("\n");
+
+   dp2 = pop2/ar2;
+
+   pibcapita2=pib2/pop2;
 
    printf("Carta 2:\n ");
    printf("Estado: %c \n", estado2);
@@ -77,8 +92,10 @@ int main(){
    printf("Nome da cidade: %s\n", cid2);
    printf("População: %d\n", pop2);
    printf("Área: %.2f Km²\n", ar2);
-   printf("PIB: %.2f\n",pib2);
-   printf("Número de pontos turísticos: %d", turi2);
+   printf("PIB: %.2f bilhões de reais\n",pib2);
+   printf("Número de pontos turísticos: %d\n", turi2);
+   printf("Densidade populacional: %.2f hab/km² \n", dp2);
+   printf("Pib per Capita: %.2f reais", pibcapita2);
 
 
    return 0;
