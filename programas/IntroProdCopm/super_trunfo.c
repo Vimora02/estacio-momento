@@ -13,7 +13,6 @@ int main(){
    float dp1, dp2;
    float pibcapita1, pibcapita2;
    float poder1, poder2;
-   bool teste;
 
    //primeira carta
    printf("Insira as informações da primeira carta \n");
@@ -111,30 +110,122 @@ int main(){
    printf("Comparação de cartas:\n");
    printf("\n");
 
-   //Não consegui encontrar nenhum outro modo de fazer essa parte da questão sem ser com if ou a maneira que fiz
-   teste = pop1 > pop2;
-   printf("População: %s\n",teste? "Carta 1 venceu" : "Carta 2 venceu");
+   printf("Atributo: População:\n");
+   printf("Carta 1: %d\n", pop1);
+   printf("Carta 2: %d\n", pop2);
+   if (pop1 > pop2)
+   {
+    printf("Carta 1: %s venceu\n", cid1);
+   }
+   else if (pop1 < pop2)
+   {
+    printf("Carta 2: %s venceu\n", cid2);
+   }
+   else{
+    printf("Empate entre as duas cartas\n");
+   }
 
-   teste = ar1 > ar2;
-   printf("Área: %s\n", teste? "Carta 1 venceu" : "Carta 2 venceu");
+   printf("\n");
 
-   teste = pib1 > pib2;
-   printf("PIB: %s\n", teste? "Carta 1 venceu" : "Carta 2 venceu");
+
+   printf("Atributo: Área:\n");
+   printf("Carta 1: %.2f Km²\n", ar1);
+   printf("Carta 2: %.2f Km²\n", ar2);
+   if (ar1 > ar2)
+   {
+    printf("Carta 1: %s venceu\n", cid1);
+   }
+   else if (ar1 < ar2)
+   {
+    printf("Carta 2: %s venceu\n", cid2);
+   }
+   else{
+    printf("Empate entre as duas cartas\n");
+   }
    
-   teste = turi1 > turi2;
-   printf("Pontos turísticos: %s\n", teste? "Carta 1 venceu" : "Carta 2 venceu");
+   printf("\n");
 
-   teste = dp1 < dp2;
-   printf("Densidade populacional: %s\n", teste? "Carta 1 venceu" : "Carta 2 venceu");
+   printf("Atributo: PIB:\n");
+   printf("Carta 1: %.2f bilhões de reais\n", pib1);
+   printf("Carta 2: %.2f\n", pib2);
+   if (pib1 > pib2)
+   {
+    printf("Carta 1: %s venceu\n", cid1);
+   }
+   else if (pib1 < pib2)
+   {
+    printf("Carta 2: %s venceu\n", cid2);
+   }
+   else{
+    printf("Empate entre as duas cartas\n");
+   }
 
-   teste = pibcapita1 > pibcapita2;
-   printf("PIB per capita: %s\n", teste? "Carta 1 venceu" : "Carta 2 venceu");
+   printf("\n");
 
-   teste = poder1 > poder2;
-   printf("Super poder: %s\n", teste? "Carta 1 venceu" : "Carta 2 venceu");
+   printf("Atributo: Pontos turísticos:\n");
+   printf("Carta 1: %d\n", turi1);
+   printf("Carta 2: %d\n", turi2);
+   if (turi1 > turi2)
+   {
+    printf("Carta 1: %s venceu\n", cid1);
+   }
+   else if (turi1 < turi2)
+   {
+    printf("Carta 2: %s venceu\n", cid2);
+   }
+   else{
+    printf("Empate entre as duas cartas\n");
+   }
 
-   /*Não consegui achar um jeito de comparar os resultados nas aulas apresentadas no curso, tive que procura por fora para achar
-   Também achei confusa a parte de números grandes como população e etc, no final apenas escrevi para que o usuário escreva o número completo em algarismos
-   */
+   printf("\n");
+
+   printf("Atributo: Densidade pupulacional:\n");
+   printf("Carta 1: %.2f\n", dp1);
+   printf("Carta 2: %.2f\n", dp2);
+   if (dp1 > dp2)
+   {
+    printf("Carta 2: %s venceu\n", cid2);
+   }
+   else if (dp1 < dp2)
+   {
+    printf("Carta 1: %s venceu\n", cid1);
+   }
+   else{
+    printf("Empate entre as duas cartas\n");
+   }
+
+   printf("\n");
+
+   printf("Atributo: PIB per capita:\n");
+   printf("Carta 1: %.2f\n", pibcapita1);
+   printf("Carta 2: %.2f\n", pibcapita2);
+   if (pibcapita1 > pibcapita2)
+   {
+    printf("Carta 1: %s venceu\n", cid1);
+   }
+   else if (pibcapita1 < pibcapita2)
+   {
+    printf("Carta 2: %s venceu\n", cid2);
+   }
+   else{
+    printf("Empate entre as duas cartas\n");
+   }
+
+   printf("\n");
+
+   printf("Atributo: Poder:\n");
+   printf("Carta 1: %.2f\n", poder1);
+   printf("Carta 2: %.2f\n", poder2);
+   if (poder1 > poder2)
+   {
+    printf("Carta 1: %s venceu\n", cid1);
+   }
+   else if (poder1 < poder2)
+   {
+    printf("Carta 2: %s venceu\n", cid2);
+   }
+   else{
+    printf("Empate entre as duas cartas\n");
+   }
    return 0;
 }
