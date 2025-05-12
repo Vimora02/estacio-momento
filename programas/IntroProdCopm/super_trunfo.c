@@ -13,17 +13,30 @@ int main(){
    float dp1, dp2;
    float pibcapita1, pibcapita2;
    float poder1, poder2;
+   int opcao, escolha;
 
+
+  printf("Menu Principal\n");
+  printf("1. Iniciar Jogo\n");
+  printf("2. Ver Regras\n");
+  printf("3. Sair\n");
+  printf("Escolha uma opção: \n");
+  scanf("%d", &opcao);
+
+   switch (opcao) {
+   //Código para começar o jogo
+   case 1 :
+   printf("Iniciando jogo:\n");
    //primeira carta
    printf("Insira as informações da primeira carta \n");
 
    printf("Insira a letra que represente de seu estado:");
-   scanf("%c", &estado1);
+   scanf(" 3%c", &estado1);
 
    printf("Insira o código que represente de seu estado:");
    scanf("%s", codigo1);
 
-   printf("Insira o nome completo de sua cidade(use _ ao invés de espaço para separar nomes compostos):");
+   printf("Insira o nome completo de sua cidade:");
    scanf("%s", cid1);
 
    printf("Insira a população de seu estado:");
@@ -32,7 +45,7 @@ int main(){
    printf("Insira a área total de seu estado:");
    scanf("%f", &ar1);
 
-   printf("Insira o PIB de seu estado(escreva o algarismo completo do número):");
+   printf("Insira o PIB de seu estado:");
    scanf("%f", &pib1);
 
    printf("Insira o número de pontos turísticos de seu estado:");
@@ -68,16 +81,16 @@ int main(){
    printf("Insira o código que represente de seu estado:");
    scanf("%s", codigo2);
 
-   printf("Insira o nome completo de sua cidade(use _ ao invés de espaço para separar nomes compostos):");
+   printf("Insira o nome completo de sua cidade:");
    scanf("%s", cid2);
 
-   printf("Insira a população de seu estado(escreva o algarismo completo do número):");
+   printf("Insira a população de seu estado:");
    scanf("%d", &pop2);
 
    printf("Insira a área total de seu estado:");
    scanf("%f", &ar2);
 
-   printf("Insira o PIB de seu estado(escreva o algarismo completo do número):");
+   printf("Insira o PIB de seu estado:");
    scanf("%f", &pib2);
 
    printf("Insira o número de pontos turísticos de seu estado:");
@@ -106,7 +119,19 @@ int main(){
 
    //Comparação de cartas
 
+   printf("Selecione qual atributo a ser comparado:\n");
+   printf("1.População\n");
+   printf("2.Área\n");
+   printf("3.PIB\n");
+   printf("4.Pontos Turísticos\n");
+   printf("5.Densidade Pupulacional\n");
+   printf("6.PIB per Capita\n");
+   printf("7.Poder\n");
+   scanf("%d",&escolha);
 
+   switch (escolha)
+   {
+   case 1:
    printf("Comparação de cartas:\n");
    printf("\n");
 
@@ -126,8 +151,9 @@ int main(){
    }
 
    printf("\n");
+   break;
 
-
+   case 2:
    printf("Atributo: Área:\n");
    printf("Carta 1: %.2f Km²\n", ar1);
    printf("Carta 2: %.2f Km²\n", ar2);
@@ -144,7 +170,9 @@ int main(){
    }
    
    printf("\n");
+   break;
 
+   case 3:
    printf("Atributo: PIB:\n");
    printf("Carta 1: %.2f bilhões de reais\n", pib1);
    printf("Carta 2: %.2f\n", pib2);
@@ -161,7 +189,9 @@ int main(){
    }
 
    printf("\n");
-
+   break;
+   
+   case 4:
    printf("Atributo: Pontos turísticos:\n");
    printf("Carta 1: %d\n", turi1);
    printf("Carta 2: %d\n", turi2);
@@ -178,7 +208,9 @@ int main(){
    }
 
    printf("\n");
+   break;
 
+   case 5:
    printf("Atributo: Densidade pupulacional:\n");
    printf("Carta 1: %.2f\n", dp1);
    printf("Carta 2: %.2f\n", dp2);
@@ -195,7 +227,9 @@ int main(){
    }
 
    printf("\n");
+   break;
 
+   case 6:
    printf("Atributo: PIB per capita:\n");
    printf("Carta 1: %.2f\n", pibcapita1);
    printf("Carta 2: %.2f\n", pibcapita2);
@@ -212,10 +246,13 @@ int main(){
    }
 
    printf("\n");
+   break;
 
+   case 7:
    printf("Atributo: Poder:\n");
    printf("Carta 1: %.2f\n", poder1);
    printf("Carta 2: %.2f\n", poder2);
+
    if (poder1 > poder2)
    {
     printf("Carta 1: %s venceu\n", cid1);
@@ -227,5 +264,33 @@ int main(){
    else{
     printf("Empate entre as duas cartas\n");
    }
+   printf("\n");
+   break;
+
+   default:
+   printf("Opção inválida, tente novamente\n");
+   break;
+
+   break;
+   }
+
+   break;
+
+   //Regras do jogo
+   case 2:
+   printf("Esse jogo é chamado supertrunfo, com o simples objetivo de inserir os aspéctos de 2 cartas e as comparar\n");
+   printf("O jogo te dará a oportunidade de inserir as informações de cada carta, porém pessamos que siga as seguintes regras:\n");
+   printf("1. Caso o nome completo de sua cidade possua mais de uma palavra, é necessário que escreva toda ela sem espaço, ou separada por'_'\n");
+   printf("2. Quando inserir números grandes como 12 milhões, lembrese de escrever ele por completo 12000000\n");
+   break;
+
+   // Sair do jogo
+   case 3:
+   printf("Saindo do jogo\n");
+   break;
+   //caso o jogador insira uma opção inválida
+   default:
+   printf("Opção inválida. Tente novamente.\n");
+}
    return 0;
 }
