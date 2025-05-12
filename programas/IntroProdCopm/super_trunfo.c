@@ -31,7 +31,7 @@ int main(){
    printf("Insira as informações da primeira carta \n");
 
    printf("Insira a letra que represente de seu estado:");
-   scanf(" 3%c", &estado1);
+   scanf(" %c", &estado1);
 
    printf("Insira o código que represente de seu estado:");
    scanf("%s", codigo1);
