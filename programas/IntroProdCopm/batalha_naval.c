@@ -56,7 +56,7 @@ void colocabarco(){//função que define a posição do barco
     
     case 3://primeiro navio diagonal
     for (int i = 0; i < (sizeof(navio3) / sizeof(navio3[0])) ; i++){
-        if (matriz[(linha - 1) + i][coluna - 1] == navio3[i]){//checar se já tem um navio na posição inserida
+        if (matriz[(linha - 1) + i][(coluna - 1)+i] == navio3[i]){//checar se já tem um navio na posição inserida
                 printf("Navios não podem se sobrepor, favor tentar novamente\n\n");
                 break;}
         matriz[(linha - 1) + i][(coluna - 1) + i] = navio3[i];
@@ -65,7 +65,7 @@ void colocabarco(){//função que define a posição do barco
 
     case 4://segundoo navio diagonal
     for (int i = 0; i < (sizeof(navio4) / sizeof(navio4[0])) ; i++){
-        if (matriz[(linha - 1) + i][coluna - 1] == navio4[i]){//checar se já tem um navio na posição inserida
+        if (matriz[(linha - 1) + i][(coluna - 1)+i] == navio4[i]){//checar se já tem um navio na posição inserida
                 printf("Navios não podem se sobrepor, favor tentar novamente\n\n");
                 break;}
         matriz[(linha - 1) + i][(coluna - 1) + i] = navio4[i];
@@ -81,6 +81,7 @@ printf("De começo, é necessário posicionar seus navios, para isso lembre-se q
 printf("O navio tem 3 caracteres de comprimento, preste atenção nisso, pois o navio tem que estar completamente dentro do tabuleiro, e não podem se sobrepor.\n");
 inicializaTabuleiro();
 imprimirtabuleiro();
+printf("\n\n");
 for (int i = 1; i < 5; i++){
     x = i;
     printf("Digite a linha onde o %d° navio começa(1 a 10):",i);
